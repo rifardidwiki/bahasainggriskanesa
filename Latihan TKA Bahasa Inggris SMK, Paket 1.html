@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Latihan TKA Bahasa Inggris SMK, Paket 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{
+  --bg:#EDF0F5;--card:#FFFFFF;--ink:#14213A;--muted:#566277;--line:#D3D9E4;
+  --accent:#FFC20E;--accent-ink:#1A1400;--accent-edge:#D9A400;--stripe-dark:#1A1A1A;
+  --pick:#1F4FBF;--pick-bg:#E6EDFC;--pick-ink:#FFFFFF;
+  --ok:#17794A;--ok-bg:#E2F4EA;--bad:#B3261E;--bad-bg:#FCE8E6;
+  --low-bg:#B3261E;--low-ink:#FFFFFF;
+  --paper:#FFFDF3;--paper-line:#E6DDB5;--th:rgba(20,33,58,.06);--scrim:rgba(10,15,26,.55);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1624;--card:#172036;--ink:#E8EDF7;--muted:#A2AEC4;--line:#2B3753;
+    --accent-edge:#B88A00;--stripe-dark:#0A0F1A;
+    --pick:#8DB0FF;--pick-bg:#1D2D55;--pick-ink:#0F1624;
+    --ok:#6FD3A0;--ok-bg:#12301F;--bad:#FF9C94;--bad-bg:#3A1816;
+    --low-bg:#FF9C94;--low-ink:#3A1816;
+    --paper:#1B2540;--paper-line:#3A4A73;--th:rgba(255,255,255,.07);--scrim:rgba(0,0,0,.65);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1624;--card:#172036;--ink:#E8EDF7;--muted:#A2AEC4;--line:#2B3753;
+  --accent-edge:#B88A00;--stripe-dark:#0A0F1A;
+  --pick:#8DB0FF;--pick-bg:#1D2D55;--pick-ink:#0F1624;
+  --ok:#6FD3A0;--ok-bg:#12301F;--bad:#FF9C94;--bad-bg:#3A1816;
+  --low-bg:#FF9C94;--low-ink:#3A1816;
+  --paper:#1B2540;--paper-line:#3A4A73;--th:rgba(255,255,255,.07);--scrim:rgba(0,0,0,.65);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+html.lock{overflow:hidden}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none !important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.5}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding-left:22px}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+.muted{color:var(--muted)}
+
+/* tombol */
+.btn{font:inherit;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.btn.small{min-height:40px;padding:6px 14px}
+.btn.block{display:flex;width:100%}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent-edge);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn:focus-visible,.nbtn:focus-visible,.gbtn:focus-visible,.linkbtn:focus-visible,.chipbtn:focus-visible,input[type=text]:focus-visible{outline:3px solid var(--pick);outline-offset:2px}
+.linkbtn{font:inherit;font-weight:700;color:var(--pick);background:none;border:0;padding:6px 4px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* pita pengaman: satu-satunya motif dekoratif */
+.stripe{height:12px;border-radius:6px;background:repeating-linear-gradient(-45deg,var(--accent) 0 12px,var(--stripe-dark) 12px 24px)}
+
+/* layar awal */
+.start{padding-top:20px;padding-bottom:40px}
+h1{font-size:28px;line-height:1.15;font-weight:700;margin:18px 0 8px}
+h2{font-size:20px;line-height:1.25;font-weight:700}
+.lead{font-size:18px;color:var(--muted)}
+.facts{margin:20px 0;border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden}
+.facts>div{display:grid;grid-template-columns:116px 1fr;gap:12px;padding:12px 14px;border-top:1px solid var(--line)}
+.facts>div:first-child{border-top:0}
+.facts dt{color:var(--muted)}
+.facts dd{font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.card h2{margin-bottom:10px}
+.plain{margin:0 0 14px;padding-left:20px}
+.plain li{margin:4px 0}
+.field{display:block;margin:0 0 12px}
+.field span{display:block;font-weight:700;margin-bottom:4px}
+.field input{width:100%;font:inherit;font-size:16px;padding:12px;border:2px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.fine{font-size:14px;color:var(--muted);margin-top:8px}
+
+/* bilah atas kuis */
+.qbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0 8px}
+.qrow{display:flex;align-items:center;gap:10px}
+.qpos{flex:1;min-width:0;white-space:nowrap;font-weight:700;font-size:17px}
+.timer{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:18px;font-variant-numeric:tabular-nums;border-radius:999px;padding:6px 14px;min-height:40px}
+.timer.low{background:var(--low-bg);color:var(--low-ink)}
+.prow{display:flex;align-items:center;gap:10px;margin-top:8px}
+.prog{flex:1;height:10px;border-radius:5px;background:var(--line);overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:repeating-linear-gradient(-45deg,var(--accent) 0 8px,var(--stripe-dark) 8px 16px);transition:width .25s}
+.pnote{font-size:13px;color:var(--muted);white-space:nowrap}
+.qmain{padding-bottom:120px}
+
+/* teks bacaan */
+.stim{background:var(--paper);border:1px solid var(--paper-line);border-left:6px solid var(--accent);border-radius:12px;margin:14px 0}
+.stim-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 8px 6px 14px;border-bottom:1px solid var(--paper-line)}
+.stim.collapsed .stim-head{border-bottom:0}
+.kind{color:var(--muted);margin-left:6px}
+.stim-body{padding:12px 14px 14px;font-size:17px;line-height:1.65}
+.stim-body p{margin:0 0 10px}
+.stim-body p:last-child{margin-bottom:0}
+.stim-body ol,.stim-body ul{margin:0 0 10px}
+.t-title{font-weight:700;font-size:19px}
+.notice{border:2px solid var(--ink);border-radius:8px;padding:12px 14px}
+.notice-title{font-weight:700;margin:0 0 8px}
+.notice-foot{font-weight:700}
+.note{font-size:15px;color:var(--muted)}
+.chat{display:flex;flex-direction:column;gap:8px}
+.msg{max-width:88%;align-self:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:8px 12px}
+.msg.me{align-self:flex-end;background:var(--pick-bg);border-radius:14px 14px 4px 14px}
+.msg .who{display:block;font-size:13px;font-weight:700;color:var(--muted)}
+.msg p{margin:2px 0 0 !important}
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;min-width:430px;font-size:16px}
+th,td{border:1px solid var(--paper-line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--th)}
+
+/* soal */
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.qtext{font-size:19px;line-height:1.45;font-weight:700;white-space:pre-line}
+.hint{color:var(--muted);font-size:14px;margin:4px 0 12px}
+.opts,.tfs{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;position:relative;border:2px solid var(--line);border-radius:12px;padding:12px;min-height:52px;cursor:pointer;background:var(--card)}
+.opt input,.segbtn input{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
+.opt .ltr{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:2px solid var(--line);font-weight:700;font-size:15px}
+.opt.multi .ltr{border-radius:8px}
+.opt .otxt{flex:1;padding-top:2px;font-size:17px}
+.opt.sel{border-color:var(--pick);background:var(--pick-bg)}
+.opt.sel .ltr{background:var(--pick);border-color:var(--pick);color:var(--pick-ink)}
+.opt.dim{opacity:.5;cursor:not-allowed}
+.opt:focus-within,.segbtn:focus-within{outline:3px solid var(--pick);outline-offset:2px}
+.tf{border:2px solid var(--line);border-radius:12px;padding:12px}
+.tfq{font-size:17px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.segbtn{position:relative;display:grid;place-items:center;min-height:46px;border:2px solid var(--line);border-radius:10px;font-weight:700;cursor:pointer;background:var(--card)}
+.segbtn.sel{background:var(--pick);border-color:var(--pick);color:var(--pick-ink)}
+
+/* bilah bawah */
+.botbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:8px 0 calc(8px + env(safe-area-inset-bottom,0px))}
+.botrow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.nbtn{font:inherit;font-size:12.5px;line-height:1.15;text-align:center;font-weight:700;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:54px;padding:6px 4px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.nbtn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent-edge)}
+.nbtn[aria-pressed="true"]{background:var(--pick-bg);border-color:var(--pick);color:var(--pick)}
+.nbtn[disabled]{opacity:.4;cursor:not-allowed}
+svg.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* lembar dan dialog */
+.overlay{position:fixed;inset:0;z-index:50;background:var(--scrim);display:flex;align-items:flex-end;justify-content:center}
+.overlay.center{align-items:center;padding:16px}
+.sheet{width:100%;max-width:640px;max-height:90%;overflow:auto;background:var(--card);border-radius:18px 18px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.dialog{width:100%;max-width:420px;background:var(--card);border-radius:16px;padding:18px}
+.dialog p{margin:10px 0 16px}
+.dlg-actions{display:grid;gap:8px}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:14px 0}
+.gbtn{position:relative;font:inherit;font-weight:700;min-height:46px;border-radius:10px;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.gbtn.done{background:var(--pick);border-color:var(--pick);color:var(--pick-ink)}
+.gbtn.part{border-style:dashed;border-color:var(--pick)}
+.gbtn.cur{outline:3px solid var(--accent);outline-offset:1px}
+.gbtn.flag::after{content:"";position:absolute;top:-5px;right:-5px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:2px solid var(--stripe-dark)}
+.legend{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;border:2px solid var(--line);vertical-align:-2px;margin-right:6px}
+.legend .l-done{background:var(--pick);border-color:var(--pick)}
+.legend .l-part{border-style:dashed;border-color:var(--pick)}
+.legend .l-flag{background:var(--accent);border-color:var(--stripe-dark);border-radius:50%}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:60;max-width:calc(100% - 32px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;text-align:center}
+
+/* hasil */
+.result{padding-top:20px;padding-bottom:40px}
+.score{display:flex;align-items:baseline;gap:10px;margin:10px 0 4px}
+.score b{font-size:64px;line-height:1;font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+.stats>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 8px;text-align:center}
+.stats b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.stats span{font-size:13px;color:var(--muted)}
+.brow{display:grid;grid-template-columns:minmax(110px,1.2fr) 2fr auto;gap:10px;align-items:center;margin:8px 0}
+.bbar{height:10px;border-radius:5px;background:var(--line);overflow:hidden}
+.bbar i{display:block;height:100%;background:var(--pick)}
+.bn{font-variant-numeric:tabular-nums;font-weight:700}
+.sum{white-space:pre-wrap;font:inherit;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:12px;margin:0 0 12px;user-select:text;-webkit-user-select:text}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.chipbtn{font:inherit;font-weight:700;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;min-height:40px;cursor:pointer}
+.chipbtn[aria-pressed="true"]{background:var(--pick);border-color:var(--pick);color:var(--pick-ink)}
+.rcard{border:1px solid var(--line);border-left:6px solid var(--line);border-radius:12px;padding:14px;margin:12px 0;background:var(--card)}
+.rcard.ok{border-left-color:var(--ok)}
+.rcard.bad{border-left-color:var(--bad)}
+.rhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.chip{font-size:13px;font-weight:700;padding:2px 10px;border-radius:999px;background:var(--line);color:var(--ink)}
+.chip.ok{background:var(--ok-bg);color:var(--ok)}
+.chip.bad{background:var(--bad-bg);color:var(--bad)}
+.rq{font-weight:700;white-space:pre-line}
+.ropts{list-style:none;padding:0;margin:10px 0;display:flex;flex-direction:column;gap:6px}
+.ropts li{border:1px solid var(--line);border-radius:10px;padding:8px 10px;display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.ropts li.ok{border-color:var(--ok);background:var(--ok-bg)}
+.ropts li.bad{border-color:var(--bad);background:var(--bad-bg)}
+.ropts .ltr{font-weight:700;min-width:20px}
+.ropts .otxt{flex:1;min-width:60%}
+.tag{font-size:13px;font-weight:700}
+.tfrow{font-size:15px;color:var(--muted);width:100%}
+.twhy{font-size:15px;width:100%}
+.rwhy{margin-top:6px}
+.rtext{margin-top:10px}
+.rtext summary{cursor:pointer;font-weight:700;color:var(--pick);min-height:32px}
+.rtext .stim{margin-top:8px}
+@media (max-width:380px){
+  h1{font-size:25px}
+  .facts>div{grid-template-columns:96px 1fr}
+  .score b{font-size:54px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+}
+</style>
+</head>
+<body>
+<noscript><p style="padding:16px">Halaman ini perlu JavaScript aktif untuk menampilkan soal.</p></noscript>
+
+<!-- LAYAR AWAL -->
+<main id="screen-start" class="wrap start" hidden>
+  <div class="stripe" aria-hidden="true"></div>
+  <h1>Latihan TKA Bahasa Inggris SMK</h1>
+  <p class="lead">Paket 1. Kerjakan langsung di HP.</p>
+  <dl class="facts">
+    <div><dt>Jumlah soal</dt><dd>30 soal</dd></div>
+    <div><dt>Waktu</dt><dd>60 menit</dd></div>
+    <div><dt>Level bahasa</dt><dd>A2 sampai B1</dd></div>
+    <div><dt>Bentuk soal</dt><dd>Pilihan ganda, pilih 2 jawaban, dan benar/salah</dd></div>
+    <div><dt>Penilaian</dt><dd>Tiap soal 1 poin. Soal pilih 2 jawaban dan benar/salah baru dapat poin jika semua jawabannya benar.</dd></div>
+  </dl>
+  <section class="card">
+    <h2>Sebelum mulai</h2>
+    <ul class="plain">
+      <li>Baca teks dulu, lalu jawab soal di bawahnya.</li>
+      <li>Soal sulit? Tekan Tandai, lanjut dulu, lalu kembali lewat Daftar soal.</li>
+      <li>Waktu terus berjalan walau halaman ditutup. Jawabanmu tersimpan otomatis di HP ini.</li>
+    </ul>
+    <label class="field"><span>Nama (boleh dikosongkan)</span><input id="inName" type="text" autocomplete="name" maxlength="60" placeholder="Nama lengkap"></label>
+    <label class="field"><span>Kelas (boleh dikosongkan)</span><input id="inClass" type="text" maxlength="30" placeholder="Contoh: XII RPL 1"></label>
+    <button class="btn primary block" id="btnStart" type="button">Mulai latihan</button>
+  </section>
+  <p class="fine">Soal latihan orisinal yang mengikuti pola TKA Bahasa Inggris: teks fungsional, bacaan, dan bahasa dalam konteks. Ini bukan soal resmi.</p>
+</main>
+
+<!-- LAYAR KUIS -->
+<div id="screen-quiz" hidden>
+  <header class="qbar">
+    <div class="wrap">
+      <div class="qrow">
+        <div class="qpos" id="qpos">Soal 1/30</div>
+        <div class="timer" id="timerBox" role="timer" aria-label="Sisa waktu">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>
+          <span id="timer">60:00</span>
+        </div>
+        <button class="btn small" id="btnFinishTop" type="button">Selesai</button>
+      </div>
+      <div class="prow">
+        <div class="prog" id="prog" role="progressbar" aria-label="Soal terjawab" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><i id="progFill"></i></div>
+        <span class="pnote" id="pnote">0 dari 30 terjawab</span>
+      </div>
+    </div>
+  </header>
+  <main class="wrap qmain" id="qarea"></main>
+  <nav class="botbar" aria-label="Navigasi soal">
+    <div class="wrap botrow">
+      <button class="nbtn" id="btnPrev" type="button">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Kembali</span>
+      </button>
+      <button class="nbtn" id="btnGrid" type="button">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Daftar soal</span>
+      </button>
+      <button class="nbtn" id="btnFlag" type="button" aria-pressed="false">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg><span>Tandai</span>
+      </button>
+      <button class="nbtn primary" id="btnNext" type="button">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>Lanjut</span>
+      </button>
+    </div>
+  </nav>
+</div>
+
+<!-- LAYAR HASIL -->
+<main id="screen-result" class="wrap result" hidden>
+  <div class="stripe" aria-hidden="true"></div>
+  <h1 id="resTitle">Hasil latihan</h1>
+  <p class="muted" id="resWho"></p>
+  <div class="score"><b id="scoreNum">0</b><span class="lead">dari 100</span></div>
+  <p id="scoreMsg"></p>
+  <div class="stats">
+    <div><b id="stOk">0</b><span>Benar</span></div>
+    <div><b id="stBad">0</b><span>Salah</span></div>
+    <div><b id="stBlank">0</b><span>Kosong</span></div>
+    <div><b id="stTime">0</b><span>Menit</span></div>
+  </div>
+  <section class="card">
+    <h2>Hasil per jenis teks</h2>
+    <div id="breakdown"></div>
+    <p id="weak" class="muted"></p>
+  </section>
+  <section class="card">
+    <h2>Ringkasan untuk guru</h2>
+    <pre class="sum" id="summary"></pre>
+    <button class="btn block" id="btnCopy" type="button">Salin ringkasan</button>
+    <p class="fine" id="copyMsg" role="status"></p>
+  </section>
+  <section class="card">
+    <h2>Pembahasan</h2>
+    <div class="chips" id="chips"></div>
+    <div id="review"></div>
+  </section>
+  <button class="btn primary block" id="btnRestart" type="button">Mulai latihan baru</button>
+</main>
+
+<!-- DAFTAR SOAL -->
+<div class="overlay" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-head">
+      <h2 id="sheetTitle">Daftar soal</h2>
+      <button class="btn small" id="sheetClose" type="button">Tutup</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <ul class="legend">
+      <li><i class="l-done"></i>Terjawab</li>
+      <li><i></i>Belum</li>
+      <li><i class="l-part"></i>Belum lengkap</li>
+      <li><i class="l-flag"></i>Ditandai</li>
+    </ul>
+    <button class="btn primary block" id="btnFinishSheet" type="button">Selesai dan lihat skor</button>
+  </div>
+</div>
+
+<!-- KONFIRMASI -->
+<div class="overlay center" id="confirm" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="cfTitle">
+    <h2 id="cfTitle"></h2>
+    <p id="cfBody"></p>
+    <div class="dlg-actions">
+      <button class="btn primary" id="cfOk" type="button"></button>
+      <button class="btn" id="cfCancel" type="button"></button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function () {
+  "use strict";
+
+  var TOTAL_MS = 60 * 60 * 1000;
+  var KEY = "tka-smk-eng-paket1-v1";
+
+  var SECS = [
+    ["fn", "Functional texts"],
+    ["desc", "Descriptive"],
+    ["rec", "Recount"],
+    ["nar", "Narrative"],
+    ["proc", "Procedure"],
+    ["exp", "Analytical exposition"],
+    ["dia", "Dialogue"],
+    ["lang", "Language in context"]
+  ];
+
+  /* ---------- TEKS BACAAN ---------- */
+  var TEXTS = {
+    t1: { label: "Text 1", kind: "Notice", html:
+      '<div class="notice"><p class="notice-title">WORKSHOP RULES</p><ol>' +
+      '<li>Always wear safety shoes and a helmet.</li>' +
+      '<li>Do not use a machine without your teacher.</li>' +
+      '<li>Put the tools back on the shelf after use.</li>' +
+      '<li>Clean your table before you leave.</li></ol>' +
+      '<p class="notice-foot">No food or drink in the workshop!</p></div>' },
+    t2: { label: "Text 2", kind: "Chat messages", html:
+      '<div class="chat">' +
+      '<div class="msg"><span class="who">Rina</span><p>Hi Dani, are you coming to the lab today?</p></div>' +
+      '<div class="msg me"><span class="who">Dani</span><p>Sorry, I can’t. I’m sick, so I’m staying at home.</p></div>' +
+      '<div class="msg"><span class="who">Rina</span><p>Oh no! Get well soon. We will finish the website project tomorrow.</p></div>' +
+      '<div class="msg me"><span class="who">Dani</span><p>Thanks. Can you send me the notes from Mr. Hadi’s class?</p></div>' +
+      '<div class="msg"><span class="who">Rina</span><p>Sure. I will send them tonight.</p></div></div>' },
+    t3: { label: "Text 3", kind: "Announcement", html:
+      '<div class="notice"><p class="notice-title">ANNOUNCEMENT: CAREER DAY</p>' +
+      '<p>SMK Maju Jaya will have a Career Day.</p>' +
+      '<p><b>Date:</b> Friday, 20 November<br><b>Time:</b> 08.00 – 12.00<br><b>Place:</b> School hall</p>' +
+      '<p>People from five local companies will come to talk about jobs and how to write a good CV.</p>' +
+      '<p>All Grade XII students must come. Students of Grade X and XI may join after 10.00, but only if they have no lessons.</p>' +
+      '<p>Please tell your homeroom teacher before Wednesday.</p></div>' },
+    t4: { label: "Text 4", kind: "Job advertisement", html:
+      '<div class="notice"><p class="notice-title">WE NEED A COMPUTER HELPER (PART-TIME)</p>' +
+      '<p><b>Bintang Computer Shop, Malang</b></p><p>We need someone who:</p><ul>' +
+      '<li>finished SMK (computer or network program)</li>' +
+      '<li>can fix laptops and install programs</li>' +
+      '<li>is friendly and polite</li>' +
+      '<li>can work on Saturday and Sunday</li></ul>' +
+      '<p>We give lunch every day and a good salary.</p>' +
+      '<p>Please send your CV to bintangcomputer@mail.com before 30 November.</p></div>' },
+    t5: { label: "Text 5", kind: "Schedule", html:
+      '<p class="t-title">Work Practice Preparation Week</p>' +
+      '<div class="tbl-wrap"><table><thead><tr><th>Day</th><th>Time</th><th>Activity</th><th>Place</th></tr></thead><tbody>' +
+      '<tr><td>Monday</td><td>08.00 – 10.00</td><td>Safety lesson</td><td>Room 3</td></tr>' +
+      '<tr><td>Tuesday</td><td>09.00 – 12.00</td><td>Practice with machines</td><td>Workshop</td></tr>' +
+      '<tr><td>Wednesday</td><td>08.00 – 09.30</td><td>Written test</td><td>Room 3</td></tr>' +
+      '<tr><td>Thursday</td><td>10.00 – 12.00</td><td>Visit to a company</td><td>Maju Motor</td></tr>' +
+      '</tbody></table></div>' +
+      '<p class="note">The bus to the company leaves from the school gate at 09.30.</p>' },
+    t6: { label: "Text 6", kind: "Descriptive text", html:
+      '<p class="t-title">Mount Bromo</p>' +
+      '<p>Mount Bromo is one of the most beautiful mountains in East Java. It is about 2,300 metres high and it is in a national park. The mountain is still active, so some smoke comes out from the top.</p>' +
+      '<p>Many tourists come to Bromo to see the sunrise. They usually go to a place called Penanjakan at three o’clock in the morning, because the view from there is amazing. After that, they go to the mountain by jeep. Then they walk or ride a horse across a large sand area to the foot of the mountain. To reach the top, they must climb about 250 steps.</p>' +
+      '<p>The weather at Bromo is very cold, especially at night. Visitors should bring a jacket, gloves and a hat.</p>' },
+    t7: { label: "Text 7", kind: "Recount text", html:
+      '<p class="t-title">My First Day at the Workshop</p>' +
+      '<p>Last Monday was my first day of work practice at Maju Motor, a motorcycle workshop in Malang. I got up at five o’clock and left home at half past six. I was nervous because I did not know anybody there.</p>' +
+      '<p>When I arrived, the owner, Mr. Anton, welcomed me and gave me a work shirt. He introduced me to the other workers. Then he showed me the tools and the safety rules.</p>' +
+      '<p>In the morning, I only watched Mr. Anton change the oil of a motorcycle. After lunch, he asked me to clean the tools and the floor. I was a little tired, but I felt happy. The workers were friendly and they helped me when I had a problem.</p>' +
+      '<p>At four o’clock, I went home. I learned a lot on my first day.</p>' },
+    t8: { label: "Text 8", kind: "Narrative text", html:
+      '<p class="t-title">The Lost Wallet</p>' +
+      '<p>One rainy afternoon, Budi, a bus driver, found a brown wallet under a seat in his bus. There was a lot of money in it, and also an ID card and a photo of a little girl.</p>' +
+      '<p>Budi did not take the money. He thought, “The owner must be very sad now.” He read the address on the ID card. After work, he took his motorcycle to the house, in a village near the city.</p>' +
+      '<p>An old man opened the door. He was very surprised when he saw his wallet. “I needed this money for my granddaughter’s school,” he said with tears in his eyes. He wanted to give Budi some money to say thank you, but Budi said, “No, thank you. I am just happy to help.”</p>' +
+      '<p>The next day, the old man told the story to his neighbours. Soon, everybody in the village knew about the honest bus driver.</p>' },
+    t9: { label: "Text 9", kind: "Procedure text", html:
+      '<p class="t-title">How to Connect Your Phone to Wi-Fi</p>' +
+      '<p>Follow these steps.</p><ol>' +
+      '<li>Open “Settings” on your phone.</li>' +
+      '<li>Tap “Wi-Fi” and turn it on.</li>' +
+      '<li>Wait for a list of networks to appear.</li>' +
+      '<li>Choose the name of the network you want to use.</li>' +
+      '<li>Type the password. If you don’t know it, ask the owner of the Wi-Fi.</li>' +
+      '<li>Tap “Connect”. When you see the Wi-Fi sign at the top of the screen, your phone is ready to use the internet.</li></ol>' },
+    t10: { label: "Text 10", kind: "Analytical exposition", html:
+      '<p class="t-title">Why We Should Save Electricity at School</p>' +
+      '<p>Saving electricity at school is very important. There are three reasons for this.</p>' +
+      '<p>First, it saves money. A school pays a lot for electricity every month. If we turn off the lights and fans when we leave the classroom, the school can use the money for other things, such as new books or computers.</p>' +
+      '<p>Second, it is good for the environment. Most electricity comes from power stations, and they make the air dirty. When we use less electricity, we help to keep the air clean.</p>' +
+      '<p>Third, it is a good habit. Students who save electricity at school will do the same at home. They will also do it in the future when they work in a company.</p>' +
+      '<p>In conclusion, everybody at school should turn off the lights, fans and computers when they do not use them.</p>' },
+    t11: { label: "Text 11", kind: "Dialogue", html:
+      '<p class="t-title">At a Phone Shop</p><div class="chat">' +
+      '<div class="msg"><span class="who">Customer</span><p>Good morning. I bought this phone here last week. The screen doesn’t work well.</p></div>' +
+      '<div class="msg me"><span class="who">Staff</span><p>I’m sorry to hear that. May I see it, please?</p></div>' +
+      '<div class="msg"><span class="who">Customer</span><p>Sure. Here you are.</p></div>' +
+      '<div class="msg me"><span class="who">Staff</span><p>I see. The phone is only one week old, so we can repair it for free. But it will take three days.</p></div>' +
+      '<div class="msg"><span class="who">Customer</span><p>Three days? That’s too long. I need it for my work.</p></div>' +
+      '<div class="msg me"><span class="who">Staff</span><p>I understand. I will ask one of our workers to finish it in two days.</p></div>' +
+      '<div class="msg"><span class="who">Customer</span><p>That would be great. Thank you very much.</p></div></div>' },
+    t12: { label: "Text 12", kind: "Message", html:
+      '<div class="notice"><p>Dear Mr. Hadi,</p>' +
+      '<p>I am sorry I <b>(26) ______</b> come to school yesterday. I was sick, <b>(27) ______</b> I stayed at home all day. I will give you my doctor’s letter <b>(28) ______</b> Monday.</p>' +
+      '<p>Best regards,<br>Dewi</p></div>' },
+    t13: { label: "Text 13", kind: "Dialogue", html:
+      '<div class="chat">' +
+      '<div class="msg"><span class="who">Dina</span><p>I think we should use a laptop for the presentation.</p></div>' +
+      '<div class="msg me"><span class="who">Eko</span><p><b>______</b> A laptop is easier to carry.</p></div></div>' }
+  };
+
+  /* ---------- SOAL ---------- */
+  var ITEMS = [
+    { sec: "fn", text: "t1", type: "single",
+      q: "What must students do after they use the tools?",
+      opts: ["Take them home.", "Put them back on the shelf.", "Give them to the teacher.", "Clean them with water."],
+      ans: 1,
+      why: "Aturan nomor 3: “Put the tools back on the shelf after use.” Alat dikembalikan ke rak setelah dipakai." },
+    { sec: "fn", text: "t1", type: "tf",
+      q: "Decide whether each statement is True or False.",
+      stmts: ["Students can use a machine when the teacher is not there.", "Students must wear a helmet in the workshop.", "Students can eat in the workshop if they are hungry.", "Students must clean their table before they leave."],
+      ans: [false, true, false, true],
+      why: ["Aturan 2: “Do not use a machine without your teacher.” Mesin tidak boleh dipakai tanpa guru.", "Aturan 1: selalu memakai sepatu keselamatan dan helm.", "Ada tulisan “No food or drink in the workshop!”.", "Aturan 4: “Clean your table before you leave.”"] },
+    { sec: "fn", text: "t2", type: "single",
+      q: "What will Rina do tonight?",
+      opts: ["Visit Dani at his house.", "Finish the website project.", "Send the class notes to Dani.", "Ask Mr. Hadi for help."],
+      ans: 2,
+      why: "Rina berkata “I will send them tonight.” Kata “them” merujuk pada catatan pelajaran (the notes) dari kelas Mr. Hadi." },
+    { sec: "fn", text: "t3", type: "single",
+      q: "Who must come to the Career Day?",
+      opts: ["All students of Grade X.", "All students of Grade XI.", "All students of Grade XII.", "Teachers from local companies."],
+      ans: 2,
+      why: "Teks menyebut “All Grade XII students must come.” Siswa kelas X dan XI hanya boleh ikut (may join) setelah pukul 10.00." },
+    { sec: "fn", text: "t3", type: "single",
+      q: "The word “join” in the announcement is closest in meaning to ____.",
+      opts: ["leave", "watch", "take part in", "talk to"],
+      ans: 2,
+      why: "“May join” berarti boleh ikut. Padanan terdekatnya adalah “take part in” (ikut serta dalam)." },
+    { sec: "fn", text: "t4", type: "multi",
+      q: "Which TWO things does the shop need?",
+      opts: ["Someone who can work on weekends.", "Someone who lives near the shop.", "Someone who can fix laptops.", "Someone who has worked for three years.", "Someone who can ride a motorcycle."],
+      ans: [0, 2],
+      why: "Syarat dalam iklan: bisa bekerja pada hari Sabtu dan Minggu (akhir pekan) dan bisa memperbaiki laptop. Tempat tinggal, pengalaman tiga tahun, dan mengendarai motor tidak disebut." },
+    { sec: "fn", text: "t4", type: "single",
+      q: "What should people do if they want this job?",
+      opts: ["Visit the shop on Saturday.", "Send their CV before 30 November.", "Call the shop every day.", "Bring their own laptop to the shop."],
+      ans: 1,
+      why: "Kalimat terakhir: “Please send your CV ... before 30 November.” Pelamar harus mengirim CV sebelum 30 November." },
+    { sec: "fn", text: "t5", type: "tf",
+      q: "Decide whether each statement is True or False.",
+      stmts: ["The safety lesson is in Room 3.", "Students have practice with machines on Wednesday.", "The test is shorter than the safety lesson.", "The bus leaves at 10.00."],
+      ans: [true, false, true, false],
+      why: ["Baris Monday: Safety lesson, tempatnya Room 3.", "Practice with machines ada pada hari Tuesday, bukan Wednesday.", "Tes berlangsung 08.00–09.30 (1,5 jam), sedangkan Safety lesson 08.00–10.00 (2 jam).", "Catatan di bawah tabel: bus berangkat pukul 09.30, bukan 10.00."] },
+
+    { sec: "desc", text: "t6", type: "single",
+      q: "What is the text mainly about?",
+      opts: ["How to climb a mountain safely", "Mount Bromo and what visitors can see and do there", "The history of a national park in Java", "The dangers of active volcanoes"],
+      ans: 1,
+      why: "Teks menjelaskan Gunung Bromo (lokasi, tinggi, cuaca) dan hal yang dilakukan pengunjung: melihat matahari terbit, naik kuda, dan mendaki tangga. Itulah ide pokoknya." },
+    { sec: "desc", text: "t6", type: "single",
+      q: "The word “amazing” in the second paragraph is closest in meaning to ____.",
+      opts: ["wonderful", "boring", "dangerous", "normal"],
+      ans: 0,
+      why: "“Amazing” berarti menakjubkan atau sangat bagus, paling dekat dengan “wonderful”. Pilihan lain berarti membosankan, berbahaya, dan biasa." },
+    { sec: "desc", text: "t6", type: "tf",
+      q: "Decide whether each statement is True or False.",
+      stmts: ["Mount Bromo is not active now.", "Many tourists go to Penanjakan to see the sunrise.", "Tourists can ride a horse to the top of the mountain.", "Visitors should bring warm clothes."],
+      ans: [false, true, false, true],
+      why: ["Teks: “The mountain is still active.” Gunung itu masih aktif.", "Wisatawan pergi ke Penanjakan pukul tiga pagi untuk melihat matahari terbit.", "Naik kuda hanya sampai kaki gunung. Untuk sampai ke puncak, mereka harus mendaki sekitar 250 anak tangga.", "Pengunjung disarankan membawa jaket, sarung tangan, dan topi karena udaranya dingin. Itu termasuk pakaian hangat."] },
+
+    { sec: "rec", text: "t7", type: "single",
+      q: "What did the writer do in the morning?",
+      opts: ["Cleaned the tools and the floor.", "Changed the oil of a motorcycle.", "Watched Mr. Anton change the oil of a motorcycle.", "Met the customers of the workshop."],
+      ans: 2,
+      why: "Di pagi hari penulis “only watched” Mr. Anton mengganti oli. Membersihkan alat dan lantai terjadi setelah makan siang." },
+    { sec: "rec", text: "t7", type: "single",
+      q: "Why was the writer nervous at first?",
+      opts: ["The writer was late for work.", "The writer did not know anyone there.", "The writer did not have a work shirt.", "The writer did not like motorcycles."],
+      ans: 1,
+      why: "“I was nervous because I did not know anybody there.” Penulis gugup karena tidak mengenal siapa pun di bengkel." },
+    { sec: "rec", text: "t7", type: "multi",
+      q: "Which TWO things did Mr. Anton do on the first day?",
+      opts: ["He gave the writer a work shirt.", "He drove the writer home at four o’clock.", "He showed the writer the tools and the safety rules.", "He asked the writer to repair a motorcycle.", "He paid the writer some money."],
+      ans: [0, 2],
+      why: "Mr. Anton memberi baju kerja dan menunjukkan alat serta aturan keselamatan. Penulis hanya diminta menonton dan membersihkan. Tidak ada yang mengantar pulang atau membayar." },
+
+    { sec: "nar", text: "t8", type: "single",
+      q: "What can we learn from the story?",
+      opts: ["We should not drive in the rain.", "We should always carry a lot of money.", "We should be honest and help other people.", "We should ask for a reward when we help someone."],
+      ans: 2,
+      why: "Budi tidak mengambil uang itu, mengantar dompet ke pemiliknya, dan menolak imbalan. Pesan ceritanya: jujur dan mau menolong orang lain." },
+    { sec: "nar", text: "t8", type: "single",
+      q: "“He was very surprised when he saw his wallet.” (paragraph 3)\nWho is “he”?",
+      opts: ["Budi", "The old man", "The little girl", "A neighbour"],
+      ans: 1,
+      why: "Kalimat sebelumnya: “An old man opened the door.” Kata “He” pada kalimat berikutnya merujuk pada bapak tua itu." },
+    { sec: "nar", text: "t8", type: "tf",
+      q: "Decide whether each statement is True or False.",
+      stmts: ["Budi found the wallet in his bus.", "Budi took some money from the wallet.", "The old man gave Budi some money.", "People in the village knew the story about Budi."],
+      ans: [true, false, false, true],
+      why: ["Paragraf 1: Budi menemukan dompet di bawah kursi di busnya.", "“Budi did not take the money.”", "Bapak tua ingin memberi uang, tetapi Budi menolak.", "Kalimat terakhir: semua orang di desa tahu tentang sopir bus yang jujur."] },
+
+    { sec: "proc", text: "t9", type: "single",
+      q: "What is the purpose of the text?",
+      opts: ["To show how to connect a phone to Wi-Fi.", "To describe how a Wi-Fi network looks.", "To tell a story about a lost phone.", "To ask people to buy a new phone."],
+      ans: 0,
+      why: "Teks berisi langkah berurutan (1 sampai 6) untuk menyambungkan HP ke Wi-Fi. Itu ciri procedure text: tujuannya menunjukkan cara melakukan sesuatu." },
+    { sec: "proc", text: "t9", type: "single",
+      q: "What should you do if you do not know the password?",
+      opts: ["Open “Settings” again.", "Ask the owner of the Wi-Fi.", "Tap “Connect” two times.", "Turn off the Wi-Fi."],
+      ans: 1,
+      why: "Langkah 5: “If you don’t know it, ask the owner of the Wi-Fi.” Jika tidak tahu kata sandi, tanyakan pada pemilik Wi-Fi." },
+    { sec: "proc", text: "t9", type: "multi",
+      q: "Which TWO steps come before “Choose the name of the network”?",
+      opts: ["Type the password.", "Open “Settings”.", "Tap “Connect”.", "Turn on Wi-Fi.", "Look at the Wi-Fi sign on the screen."],
+      ans: [1, 3],
+      why: "Memilih nama jaringan adalah langkah 4. Sebelumnya ada membuka Settings (langkah 1) dan menyalakan Wi-Fi (langkah 2). Mengetik password, menekan Connect, dan melihat tanda Wi-Fi terjadi sesudahnya." },
+
+    { sec: "exp", text: "t10", type: "single",
+      q: "What is the writer’s main idea?",
+      opts: ["Schools need to buy more computers.", "Students should go home early.", "Everybody at school should save electricity.", "Power stations should stop making electricity."],
+      ans: 2,
+      why: "Kalimat pembuka dan kalimat penutup sama-sama menyatakan gagasan utama: menghemat listrik di sekolah itu penting dan semua orang sebaiknya melakukannya." },
+    { sec: "exp", text: "t10", type: "single",
+      q: "What is the purpose of the last paragraph?",
+      opts: ["To give a new reason.", "To tell a personal story.", "To repeat the main idea and give advice.", "To describe the school."],
+      ans: 2,
+      why: "Paragraf terakhir diawali “In conclusion”. Isinya mengulang gagasan utama dan memberi saran: matikan lampu, kipas, dan komputer saat tidak dipakai." },
+    { sec: "exp", text: "t10", type: "multi",
+      q: "Which TWO of these reasons are given in the text?",
+      opts: ["It saves the school’s money.", "It makes the fans last longer.", "It keeps the air cleaner.", "It makes computers work faster.", "It gives students better marks."],
+      ans: [0, 2],
+      why: "Alasan dalam teks: menghemat uang sekolah (paragraf 2), menjaga udara tetap bersih (paragraf 3), dan menjadi kebiasaan baik (paragraf 4). Pilihan lain tidak disebut." },
+
+    { sec: "dia", text: "t11", type: "single",
+      q: "Why can the shop repair the phone for free?",
+      opts: ["The customer is a friend of the staff.", "The shop has a special price this week.", "The customer bought it a short time ago.", "The screen is not broken."],
+      ans: 2,
+      why: "Staf berkata “The phone is only one week old, so we can repair it for free.” Gratis karena ponselnya baru dibeli." },
+    { sec: "dia", text: "t11", type: "single",
+      q: "“That would be great.” What does the customer mean?",
+      opts: ["The customer does not like the idea.", "The customer is happy with the offer.", "The customer wants a new phone.", "The customer wants to wait for three days."],
+      ans: 1,
+      why: "“That would be great” adalah ungkapan senang dan setuju terhadap tawaran staf untuk menyelesaikan perbaikan dalam dua hari." },
+
+    { sec: "lang", text: "t12", type: "single",
+      q: "Choose the best answer for blank (26).",
+      opts: ["am not", "can’t", "couldn’t", "won’t"],
+      ans: 2,
+      why: "“Yesterday” menunjukkan masa lampau, jadi dipakai “couldn’t come”. “Can’t” dan “won’t” bukan bentuk lampau, dan “am not come” salah tata bahasa." },
+    { sec: "lang", text: "t12", type: "single",
+      q: "Choose the best answer for blank (27).",
+      opts: ["but", "so", "because", "or"],
+      ans: 1,
+      why: "“I was sick” adalah sebab dan “I stayed at home” adalah akibat, jadi dipakai “so”. “Because” membalik hubungan sebab-akibat, dan “but” menunjukkan pertentangan." },
+    { sec: "lang", text: "t12", type: "single",
+      q: "Choose the best answer for blank (28).",
+      opts: ["in", "on", "at", "to"],
+      ans: 1,
+      why: "Preposisi untuk nama hari adalah “on”: on Monday." },
+    { sec: "lang", text: "t13", type: "single",
+      q: "Which expression best completes Eko’s answer?",
+      opts: ["I don’t think so.", "I agree with you.", "I am not sure.", "I disagree with you."],
+      ans: 1,
+      why: "Kalimat berikutnya mendukung usul Dina (“A laptop is easier to carry”), jadi Eko menyetujuinya: “I agree with you.”" },
+    { sec: "lang", text: null, type: "single",
+      q: "Workers ______ wear a helmet on a building site. It is a rule.",
+      opts: ["can", "may", "must", "would"],
+      ans: 2,
+      why: "“It is a rule” menunjukkan kewajiban, jadi dipakai “must”. “Can” dan “may” menyatakan kemampuan atau izin, bukan kewajiban." }
+  ];
+  ITEMS.forEach(function (it, i) { it.id = i + 1; });
+
+  /* ---------- UTIL ---------- */
+  function $(id) { return document.getElementById(id); }
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function shuffle(a) {
+    var r = a.slice();
+    for (var i = r.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = r[i]; r[i] = r[j]; r[j] = t;
+    }
+    return r;
+  }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function fmtClock(ms) {
+    var s = Math.max(0, Math.ceil(ms / 1000));
+    return pad(Math.floor(s / 60)) + ":" + pad(s % 60);
+  }
+  function fmtDur(ms) {
+    var s = Math.round(ms / 1000);
+    return Math.floor(s / 60) + " menit " + (s % 60) + " detik";
+  }
+  function letter(pos) { return String.fromCharCode(65 + pos); }
+
+  /* ---------- STATE ---------- */
+  var S = null;
+  var timerId = null;
+  var hideText = {};
+  var warned = {};
+  var toastT = null;
+  var onOk = null;
+  var revFilter = "all";
+
+  function loadState() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      if (!raw) return null;
+      var s = JSON.parse(raw);
+      if (!s || s.v !== 1 || !s.endsAt) return null;
+      if (!s.ans) s.ans = {};
+      if (!s.flag) s.flag = {};
+      if (!s.order) s.order = {};
+      ITEMS.forEach(function (it) {
+        if (it.type !== "tf") {
+          var o = s.order[it.id];
+          if (!Array.isArray(o) || o.length !== it.opts.length) s.order[it.id] = shuffle(it.opts.map(function (_, i) { return i; }));
+        }
+      });
+      if (typeof s.cur !== "number" || s.cur < 0 || s.cur >= ITEMS.length) s.cur = 0;
+      return s;
+    } catch (e) { return null; }
+  }
+  function saveState() {
+    try { window.localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* abaikan */ }
+  }
+  function clearState() {
+    try { window.localStorage.removeItem(KEY); } catch (e) { /* abaikan */ }
+  }
+  function newAttempt(name, kelas) {
+    var now = Date.now();
+    var order = {};
+    ITEMS.forEach(function (it) {
+      if (it.type !== "tf") order[it.id] = shuffle(it.opts.map(function (_, i) { return i; }));
+    });
+    return { v: 1, name: name, kelas: kelas, startedAt: now, endsAt: now + TOTAL_MS, finished: false, finishedAt: null, cur: 0, ans: {}, flag: {}, order: order };
+  }
+
+  /* ---------- PENILAIAN ---------- */
+  function isBlank(it, a) {
+    if (it.type === "single") return a === undefined || a === null;
+    if (it.type === "multi") return !Array.isArray(a) || a.length === 0;
+    return !Array.isArray(a) || a.every(function (v) { return v === null || v === undefined; });
+  }
+  function isComplete(it, a) {
+    if (it.type === "single") return a !== undefined && a !== null;
+    if (it.type === "multi") return Array.isArray(a) && a.length === it.ans.length;
+    return Array.isArray(a) && a.length === it.stmts.length && a.every(function (v) { return v === true || v === false; });
+  }
+  function isCorrect(it, a) {
+    if (it.type === "single") return a === it.ans;
+    if (it.type === "multi") {
+      return Array.isArray(a) && a.length === it.ans.length && it.ans.every(function (i) { return a.indexOf(i) > -1; });
+    }
+    return Array.isArray(a) && it.ans.every(function (v, i) { return a[i] === v; });
+  }
+  function compute() {
+    var per = {};
+    SECS.forEach(function (s) { per[s[0]] = { c: 0, t: 0 }; });
+    var correct = 0, wrong = 0, blank = 0, status = {};
+    ITEMS.forEach(function (it) {
+      var a = S.ans[it.id];
+      per[it.sec].t++;
+      if (isBlank(it, a)) { blank++; status[it.id] = "blank"; }
+      else if (isCorrect(it, a)) { correct++; per[it.sec].c++; status[it.id] = "ok"; }
+      else { wrong++; status[it.id] = "bad"; }
+    });
+    return { correct: correct, wrong: wrong, blank: blank, per: per, status: status, score: Math.round(correct / ITEMS.length * 100) };
+  }
+
+  /* ---------- LAYAR ---------- */
+  function show(name) {
+    ["start", "quiz", "result"].forEach(function (n) { $("screen-" + n).hidden = (n !== name); });
+    try { window.scrollTo(0, 0); } catch (e) { /* abaikan */ }
+  }
+  function toast(msg) {
+    var t = $("toast");
+    t.textContent = msg;
+    t.hidden = false;
+    clearTimeout(toastT);
+    toastT = setTimeout(function () { t.hidden = true; }, 4000);
+  }
+  function closeOverlays() {
+    $("sheet").hidden = true;
+    $("confirm").hidden = true;
+    document.documentElement.classList.remove("lock");
+  }
+  function openConfirm(title, bodyHtml, okLabel, cancelLabel, fn) {
+    $("cfTitle").textContent = title;
+    $("cfBody").innerHTML = bodyHtml;
+    $("cfOk").textContent = okLabel;
+    $("cfCancel").textContent = cancelLabel;
+    onOk = fn;
+    $("confirm").hidden = false;
+    document.documentElement.classList.add("lock");
+    $("cfCancel").focus();
+  }
+
+  /* ---------- TIMER ---------- */
+  function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } }
+  function startTimer() { stopTimer(); tick(); timerId = setInterval(tick, 1000); }
+  function tick() {
+    if (!S || S.finished) return;
+    var left = S.endsAt - Date.now();
+    if (left <= 0) { finish(true); return; }
+    $("timer").textContent = fmtClock(left);
+    $("timerBox").classList.toggle("low", left <= 5 * 60000);
+    var marks = [10, 5, 1], hit = null;
+    marks.forEach(function (m) {
+      if (left <= m * 60000 && !warned[m]) { warned[m] = true; hit = m; }
+    });
+    if (hit !== null) toast("Sisa waktu kurang dari " + hit + " menit");
+  }
+
+  /* ---------- KUIS ---------- */
+  function stimulusHTML(key) {
+    var t = TEXTS[key];
+    var hidden = !!hideText[key];
+    return '<section class="stim' + (hidden ? " collapsed" : "") + '" data-key="' + key + '" aria-label="' + esc(t.label) + '">' +
+      '<div class="stim-head"><div><b>' + esc(t.label) + '</b><span class="kind">' + esc(t.kind) + '</span></div>' +
+      '<button type="button" class="linkbtn" data-act="toggle-text" aria-expanded="' + (!hidden) + '">' + (hidden ? "Tampilkan teks" : "Sembunyikan teks") + '</button></div>' +
+      '<div class="stim-body"' + (hidden ? " hidden" : "") + '>' + t.html + '</div></section>';
+  }
+  function optHTML(type, name, val, text, checked, pos) {
+    return '<label class="opt' + (type === "checkbox" ? " multi" : "") + (checked ? " sel" : "") + '">' +
+      '<input type="' + type + '" name="' + name + '" value="' + val + '"' + (checked ? " checked" : "") + '>' +
+      '<span class="ltr" aria-hidden="true">' + letter(pos) + '</span><span class="otxt">' + esc(text) + '</span></label>';
+  }
+  function segHTML(id, i, val, label, checked) {
+    return '<label class="segbtn' + (checked ? " sel" : "") + '"><input type="radio" name="s' + id + "_" + i + '" value="' + val + '"' + (checked ? " checked" : "") + '><span>' + label + '</span></label>';
+  }
+  function questionHTML(it) {
+    var a = S.ans[it.id];
+    var h = '<article class="qcard"><h2 class="qtext">' + esc(it.q) + '</h2>';
+    if (it.type === "single") {
+      h += '<p class="hint">Pilih satu jawaban.</p><div class="opts" role="radiogroup" aria-label="Pilihan jawaban">';
+      S.order[it.id].forEach(function (oi, pos) { h += optHTML("radio", "q" + it.id, oi, it.opts[oi], a === oi, pos); });
+      h += "</div>";
+    } else if (it.type === "multi") {
+      var sel = Array.isArray(a) ? a : [];
+      h += '<p class="hint" id="multihint">Pilih ' + it.ans.length + " jawaban.</p><div class=\"opts\">";
+      S.order[it.id].forEach(function (oi, pos) { h += optHTML("checkbox", "q" + it.id, oi, it.opts[oi], sel.indexOf(oi) > -1, pos); });
+      h += "</div>";
+    } else {
+      var arr = Array.isArray(a) ? a : [];
+      h += '<p class="hint">Tentukan tiap pernyataan: True (benar) atau False (salah).</p><div class="tfs">';
+      it.stmts.forEach(function (s, i) {
+        var v = arr[i];
+        h += '<div class="tf" role="radiogroup" aria-label="' + esc(s) + '"><p class="tfq">' + esc(s) + '</p><div class="seg">' +
+          segHTML(it.id, i, "T", "True", v === true) + segHTML(it.id, i, "F", "False", v === false) + "</div></div>";
+      });
+      h += "</div>";
+    }
+    return h + "</article>";
+  }
+  function renderQuestion() {
+    var it = ITEMS[S.cur];
+    $("qarea").innerHTML = (it.text ? stimulusHTML(it.text) : "") + questionHTML(it);
+    syncSelection();
+    refreshChrome();
+    try { window.scrollTo(0, 0); } catch (e) { /* abaikan */ }
+  }
+  function syncSelection() {
+    var it = ITEMS[S.cur];
+    var area = $("qarea");
+    var labels = area.querySelectorAll("label.opt, label.segbtn");
+    for (var i = 0; i < labels.length; i++) {
+      labels[i].classList.toggle("sel", labels[i].querySelector("input").checked);
+    }
+    if (it.type === "multi") {
+      var n = it.ans.length;
+      var boxes = area.querySelectorAll("input[type=checkbox]");
+      var cnt = 0, k;
+      for (k = 0; k < boxes.length; k++) if (boxes[k].checked) cnt++;
+      for (k = 0; k < boxes.length; k++) {
+        var dis = cnt >= n && !boxes[k].checked;
+        boxes[k].disabled = dis;
+        boxes[k].parentNode.classList.toggle("dim", dis);
+      }
+      var hint = $("multihint");
+      if (hint) hint.textContent = cnt >= n
+        ? "Sudah memilih " + n + " jawaban. Lepas satu pilihan kalau ingin menggantinya."
+        : "Pilih " + n + " jawaban (" + cnt + " dari " + n + " dipilih).";
+    }
+  }
+  function refreshChrome() {
+    var it = ITEMS[S.cur];
+    $("qpos").textContent = "Soal " + (S.cur + 1) + "/" + ITEMS.length;
+    var done = 0;
+    ITEMS.forEach(function (x) { if (isComplete(x, S.ans[x.id])) done++; });
+    $("progFill").style.width = (done / ITEMS.length * 100) + "%";
+    $("prog").setAttribute("aria-valuenow", String(done));
+    $("pnote").textContent = done + " dari " + ITEMS.length + " terjawab";
+    $("btnPrev").disabled = (S.cur === 0);
+    $("btnNext").querySelector("span").textContent = (S.cur === ITEMS.length - 1) ? "Selesai" : "Lanjut";
+    var fl = !!S.flag[it.id];
+    $("btnFlag").setAttribute("aria-pressed", String(fl));
+    $("btnFlag").querySelector("span").textContent = fl ? "Ditandai" : "Tandai";
+    if (!$("sheet").hidden) buildGrid();
+  }
+  function go(i) {
+    if (i < 0 || i >= ITEMS.length) return;
+    S.cur = i;
+    saveState();
+    renderQuestion();
+  }
+  function onAnswerChange(e) {
+    var inp = e.target;
+    if (!inp || inp.tagName !== "INPUT") return;
+    var it = ITEMS[S.cur];
+    if (it.type === "single") {
+      S.ans[it.id] = Number(inp.value);
+    } else if (it.type === "multi") {
+      var boxes = $("qarea").querySelectorAll("input[type=checkbox]");
+      var sel = [];
+      for (var i = 0; i < boxes.length; i++) if (boxes[i].checked) sel.push(Number(boxes[i].value));
+      if (sel.length > it.ans.length) {
+        inp.checked = false;
+        sel = sel.filter(function (v) { return v !== Number(inp.value); });
+      }
+      S.ans[it.id] = sel;
+    } else {
+      var m = /^s(\d+)_(\d+)$/.exec(inp.name);
+      if (!m) return;
+      var arr = Array.isArray(S.ans[it.id]) ? S.ans[it.id].slice() : it.stmts.map(function () { return null; });
+      arr[Number(m[2])] = (inp.value === "T");
+      S.ans[it.id] = arr;
+    }
+    saveState();
+    syncSelection();
+    refreshChrome();
+  }
+  function onAreaClick(e) {
+    var btn = e.target.closest ? e.target.closest("[data-act=toggle-text]") : null;
+    if (!btn) return;
+    var box = btn.closest(".stim");
+    var key = box.getAttribute("data-key");
+    hideText[key] = !hideText[key];
+    var hidden = !!hideText[key];
+    box.classList.toggle("collapsed", hidden);
+    box.querySelector(".stim-body").hidden = hidden;
+    btn.textContent = hidden ? "Tampilkan teks" : "Sembunyikan teks";
+    btn.setAttribute("aria-expanded", String(!hidden));
+  }
+  function toggleFlag() {
+    var it = ITEMS[S.cur];
+    S.flag[it.id] = !S.flag[it.id];
+    saveState();
+    refreshChrome();
+  }
+
+  /* ---------- DAFTAR SOAL ---------- */
+  function buildGrid() {
+    var h = "";
+    ITEMS.forEach(function (it, i) {
+      var a = S.ans[it.id];
+      var done = isComplete(it, a);
+      var part = !done && !isBlank(it, a);
+      var cls = "gbtn" + (done ? " done" : "") + (part ? " part" : "") + (S.flag[it.id] ? " flag" : "") + (i === S.cur ? " cur" : "");
+      var lab = "Soal " + (i + 1) + (done ? ", terjawab" : part ? ", belum lengkap" : ", belum dijawab") + (S.flag[it.id] ? ", ditandai" : "") + (i === S.cur ? ", sedang dibuka" : "");
+      h += '<button type="button" class="' + cls + '" data-go="' + i + '" aria-label="' + lab + '">' + (i + 1) + "</button>";
+    });
+    $("grid").innerHTML = h;
+  }
+  function openSheet() {
+    buildGrid();
+    $("sheet").hidden = false;
+    document.documentElement.classList.add("lock");
+    $("sheetClose").focus();
+  }
+  function askFinish() {
+    var un = 0, fl = 0;
+    ITEMS.forEach(function (it) {
+      if (!isComplete(it, S.ans[it.id])) un++;
+      if (S.flag[it.id]) fl++;
+    });
+    var left = Math.max(0, S.endsAt - Date.now());
+    var body = (un ? "Masih ada <b>" + un + " soal</b> yang belum dijawab atau belum lengkap. " : "Semua soal sudah dijawab. ") +
+      (fl ? fl + " soal masih ditandai. " : "") + "Sisa waktu " + fmtClock(left) + ".";
+    $("sheet").hidden = true;
+    openConfirm("Selesaikan latihan?", body, "Selesai dan lihat skor", "Lanjut mengerjakan", function () { finish(false); });
+  }
+  function finish(auto) {
+    if (!S || S.finished) return;
+    S.finished = true;
+    S.finishedAt = Math.min(Date.now(), S.endsAt);
+    saveState();
+    stopTimer();
+    closeOverlays();
+    showResult();
+    if (auto) toast("Waktu habis. Jawabanmu sudah dinilai.");
+  }
+
+  /* ---------- HASIL ---------- */
+  function scoreMessage(sc) {
+    if (sc >= 85) return "Sangat baik. Pertahankan, lalu coba kerjakan lebih cepat.";
+    if (sc >= 70) return "Baik. Baca pembahasan soal yang salah supaya tidak terulang.";
+    if (sc >= 50) return "Cukup. Pelajari jenis teks yang masih lemah di bawah, lalu ulangi latihan.";
+    return "Masih perlu latihan. Mulai dari pembahasan, baca teks pelan-pelan, lalu coba lagi.";
+  }
+  function summaryText(R, ms) {
+    var lines = ["Latihan TKA Bahasa Inggris SMK, Paket 1"];
+    var who = (S.name || "").trim(), kls = (S.kelas || "").trim();
+    if (who || kls) lines.push("Nama: " + (who || "-") + (kls ? " (" + kls + ")" : ""));
+    lines.push("Skor: " + R.score + " dari 100 (" + R.correct + " dari " + ITEMS.length + " soal benar)");
+    lines.push("Salah: " + R.wrong + ", kosong: " + R.blank);
+    lines.push("Waktu: " + fmtDur(ms));
+    lines.push("Per jenis teks: " + SECS.map(function (s) { return s[1] + " " + R.per[s[0]].c + "/" + R.per[s[0]].t; }).join(", "));
+    return lines.join("\n");
+  }
+  function showResult() {
+    show("result");
+    var R = compute();
+    var ms = Math.max(0, (S.finishedAt || Date.now()) - S.startedAt);
+    var who = (S.name || "").trim(), kls = (S.kelas || "").trim();
+    $("resWho").textContent = who || kls ? (who || "") + (who && kls ? ", " : "") + kls : "";
+    $("scoreNum").textContent = String(R.score);
+    $("scoreMsg").textContent = scoreMessage(R.score);
+    $("stOk").textContent = String(R.correct);
+    $("stBad").textContent = String(R.wrong);
+    $("stBlank").textContent = String(R.blank);
+    $("stTime").textContent = String(Math.round(ms / 60000));
+
+    var h = "", weak = [];
+    SECS.forEach(function (s) {
+      var p = R.per[s[0]];
+      var pct = p.t ? Math.round(p.c / p.t * 100) : 0;
+      if (p.t && pct <= 50) weak.push(s[1]);
+      h += '<div class="brow"><div>' + esc(s[1]) + '</div><div class="bbar" aria-hidden="true"><i style="width:' + pct + '%"></i></div><div class="bn">' + p.c + "/" + p.t + "</div></div>";
+    });
+    $("breakdown").innerHTML = h;
+    $("weak").textContent = weak.length ? "Perlu diperkuat: " + weak.join(", ") + "." : "Semua jenis teks sudah cukup kuat.";
+
+    $("summary").textContent = summaryText(R, ms);
+    $("copyMsg").textContent = "";
+
+    revFilter = "all";
+    renderChips(R);
+    renderReview(R);
+  }
+  function renderChips(R) {
+    var defs = [["all", "Semua (" + ITEMS.length + ")"], ["bad", "Salah (" + R.wrong + ")"], ["blank", "Kosong (" + R.blank + ")"]];
+    var h = "";
+    defs.forEach(function (d) {
+      h += '<button type="button" class="chipbtn" data-filter="' + d[0] + '" aria-pressed="' + (revFilter === d[0]) + '">' + d[1] + "</button>";
+    });
+    $("chips").innerHTML = h;
+  }
+  function reviewCard(it, st) {
+    var a = S.ans[it.id];
+    var label = st === "ok" ? "Benar" : st === "bad" ? "Salah" : "Kosong";
+    var h = '<article class="rcard ' + st + '"><div class="rhead"><b>Soal ' + it.id + '</b><span class="chip ' + st + '">' + label + "</span></div>";
+    h += '<p class="rq">' + esc(it.q) + "</p>";
+    if (it.type === "tf") {
+      h += '<ul class="ropts">';
+      it.stmts.forEach(function (s, i) {
+        var ua = Array.isArray(a) ? a[i] : null;
+        var key = it.ans[i];
+        var cls = (ua === true || ua === false) ? (ua === key ? "ok" : "bad") : "";
+        h += '<li class="' + cls + '"><div class="otxt">' + esc(s) + "</div>" +
+          '<div class="tfrow">Jawabanmu: <b>' + (ua === true ? "True" : ua === false ? "False" : "kosong") + "</b>. Kunci: <b>" + (key ? "True" : "False") + "</b>.</div>" +
+          '<div class="twhy">' + esc(it.why[i]) + "</div></li>";
+      });
+      h += "</ul>";
+    } else {
+      h += '<ul class="ropts">';
+      S.order[it.id].forEach(function (oi, pos) {
+        var correct = it.type === "single" ? oi === it.ans : it.ans.indexOf(oi) > -1;
+        var chosen = it.type === "single" ? a === oi : (Array.isArray(a) && a.indexOf(oi) > -1);
+        var cls = correct ? "ok" : (chosen ? "bad" : "");
+        var tag = correct && chosen ? "Jawabanmu, benar" : correct ? "Kunci jawaban" : chosen ? "Jawabanmu, salah" : "";
+        h += '<li class="' + cls + '"><span class="ltr">' + letter(pos) + '</span><span class="otxt">' + esc(it.opts[oi]) + "</span>" + (tag ? '<span class="tag">' + tag + "</span>" : "") + "</li>";
+      });
+      h += "</ul>";
+      h += '<p class="rwhy"><b>Pembahasan:</b> ' + esc(it.why) + "</p>";
+    }
+    if (it.text) {
+      h += '<details class="rtext"><summary>Lihat teks (' + esc(TEXTS[it.text].label) + ')</summary>' +
+        '<div class="stim"><div class="stim-body">' + TEXTS[it.text].html + "</div></div></details>";
+    }
+    return h + "</article>";
+  }
+  function renderReview(R) {
+    R = R || compute();
+    var h = "";
+    ITEMS.forEach(function (it) {
+      var st = R.status[it.id];
+      if (revFilter === "bad" && st !== "bad") return;
+      if (revFilter === "blank" && st !== "blank") return;
+      h += reviewCard(it, st);
+    });
+    $("review").innerHTML = h || '<p class="muted">Tidak ada soal di kategori ini.</p>';
+  }
+  function legacyCopy(txt) {
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = txt;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.top = "0";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, txt.length);
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) { return false; }
+  }
+  function copySummary() {
+    var txt = $("summary").textContent;
+    function done(ok) {
+      $("copyMsg").textContent = ok
+        ? "Tersalin. Tempel ke WhatsApp atau pesan untuk guru."
+        : "Tidak bisa menyalin otomatis. Tekan lama teks di atas lalu pilih Salin, atau ambil tangkapan layar.";
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(function () { done(true); }, function () { done(legacyCopy(txt)); });
+    } else {
+      done(legacyCopy(txt));
+    }
+  }
+
+  /* ---------- EVENT ---------- */
+  function startQuiz() {
+    show("quiz");
+    renderQuestion();
+    startTimer();
+  }
+  $("btnStart").addEventListener("click", function () {
+    S = newAttempt($("inName").value.trim().slice(0, 60), $("inClass").value.trim().slice(0, 30));
+    warned = {};
+    hideText = {};
+    saveState();
+    startQuiz();
+  });
+  $("qarea").addEventListener("change", onAnswerChange);
+  $("qarea").addEventListener("click", onAreaClick);
+  $("btnPrev").addEventListener("click", function () { go(S.cur - 1); });
+  $("btnNext").addEventListener("click", function () {
+    if (S.cur === ITEMS.length - 1) askFinish(); else go(S.cur + 1);
+  });
+  $("btnFlag").addEventListener("click", toggleFlag);
+  $("btnGrid").addEventListener("click", openSheet);
+  $("btnFinishTop").addEventListener("click", askFinish);
+  $("btnFinishSheet").addEventListener("click", askFinish);
+  $("sheetClose").addEventListener("click", closeOverlays);
+  $("sheet").addEventListener("click", function (e) {
+    if (e.target === $("sheet")) { closeOverlays(); return; }
+    var b = e.target.closest ? e.target.closest("[data-go]") : null;
+    if (b) { closeOverlays(); go(Number(b.getAttribute("data-go"))); }
+  });
+  $("confirm").addEventListener("click", function (e) { if (e.target === $("confirm")) closeOverlays(); });
+  $("cfCancel").addEventListener("click", closeOverlays);
+  $("cfOk").addEventListener("click", function () {
+    var fn = onOk;
+    onOk = null;
+    closeOverlays();
+    if (fn) fn();
+  });
+  $("btnCopy").addEventListener("click", copySummary);
+  $("chips").addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-filter]") : null;
+    if (!b) return;
+    revFilter = b.getAttribute("data-filter");
+    var R = compute();
+    renderChips(R);
+    renderReview(R);
+  });
+  $("btnRestart").addEventListener("click", function () {
+    openConfirm("Mulai latihan baru?", "Hasil dan jawaban yang tersimpan di HP ini akan dihapus. Urutan pilihan jawaban juga diacak ulang.", "Mulai baru", "Batal", function () {
+      clearState();
+      S = null;
+      warned = {};
+      hideText = {};
+      show("start");
+    });
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeOverlays(); });
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) tick(); });
+
+  /* ---------- MULAI ---------- */
+  S = loadState();
+  if (S && S.finished) {
+    showResult();
+  } else if (S) {
+    if (Date.now() >= S.endsAt) {
+      finish(true);
+    } else {
+      startQuiz();
+      toast("Melanjutkan latihan. Sisa waktu " + fmtClock(S.endsAt - Date.now()) + ".");
+    }
+  } else {
+    show("start");
+  }
+})();
+</script>
+</body>
+</html>
